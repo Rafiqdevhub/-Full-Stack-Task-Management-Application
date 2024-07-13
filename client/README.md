@@ -1,8 +1,29 @@
-# React + Vite
+## Full-Stack-Task-Management-Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Task Management App! This repository contains the frontend code for the application, which is designed to help users manage their tasks efficiently.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Full-Stack-Task-Management-Application](#full-stack-task-management-application)
+- [Table of Contents](#table-of-contents)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+  - [Prerequisites](#prerequisites)
+
+## Features
+
+- User authentication and authorization
+- Create, update, and delete tasks
+- Responsive design for mobile and desktop
+
+## Technologies Used
+
+- **React**: JavaScript library for building user interfaces
+- **Tailwind**: Tailwind CSS is used for style
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- Node.js (>= 14.x)
+- npm (>= 6.x) or yarn (>= 1.x)
