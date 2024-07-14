@@ -29,35 +29,42 @@ const registerUser = async (req, res) => {
 };
 
 const authUser = async (req, res) => {
-  const { email, password } = req.body;
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
 
-  const user = await User.findOne({ email });
-
-  if (user && (await user.matchPassword(password))) {
-    res.json({
-      _id: user._id,
-      name: user.name,
-      email: user.email,
-      token: generateToken(user._id),
-    });
-  } else {
-    res.status(401);
-    throw new Error("Invalid email or password");
+    if (user && (await user.matchPassword(password))) {
+      res.json({
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        token: generateToken(user._id),
+      });
+    } else {
+      res.status(401).json({ message: "Invalid email or password" });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
   }
 };
 
 const getUserProfile = async (req, res) => {
-  const user = await User.findById(req.user._id);
+  try {
+    const user = await User.findById(req.user._id);
 
-  if (user) {
+    if (!user) {
+      res.status(404).json({ message: "User not found" });
+      return;
+    }
+
     res.json({
       _id: user._id,
       name: user.name,
       email: user.email,
     });
-  } else {
-    res.status(404);
-    throw new Error("User not found");
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };
 
