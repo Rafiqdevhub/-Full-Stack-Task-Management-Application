@@ -1,29 +1,31 @@
-## Full-Stack-Task-Management-Application
+# Task Management Application Frontend
 
-Welcome to the Task Management App! This repository contains the frontend code for the application, which is designed to help users manage their tasks efficiently.
+Welcome to the Task Management Application Frontend repository! This project is the frontend component of a comprehensive task management system, designed to help users manage their tasks efficiently.
 
 ## Table of Contents
 
-- [Full-Stack-Task-Management-Application](#full-stack-task-management-application)
-- [Table of Contents](#table-of-contents)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-  - [Prerequisites](#prerequisites)
+- [Task Management Application Frontend](#task-management-application-frontend)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+
+## Overview
+
+This application provides a user-friendly interface for managing tasks, allowing users to create, read, update, and delete (CRUD) tasks. It includes features such as user authentication, personalized dashboards, and task categorization.
 
 ## Features
 
-- User authentication and authorization
-- Create, update, and delete tasks
-- Responsive design for mobile and desktop
+- User Authentication (Login, Registration)
+- Dashboard with User-Specific Tasks
+- Task CRUD Functionality
+- Task Categorization and Filtering
+- Responsive Design for Mobile and Desktop
+- Intuitive User Interface
 
 ## Technologies Used
 
-- **React**: JavaScript library for building user interfaces
-- **Tailwind**: Tailwind CSS is used for style
-
-### Prerequisites
-
-Make sure you have the following installed on your machine:
-
-- Node.js (>= 14.x)
-- npm (>= 6.x) or yarn (>= 1.x)
+- **React.js**: JavaScript library for building user interfaces
+- **React Router**: For routing within the application
+- **Axios**: For making HTTP requests
+- **tailwind css** : For styling used Tailwind css
